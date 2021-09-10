@@ -1,4 +1,5 @@
-(require :curl)
+
+(local curl (require :curl))
 (local api vim.api)
 
 (local response (curl.easy {
