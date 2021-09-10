@@ -1,5 +1,5 @@
 
-(local curl (require :http))
+(local curl (require :curl))
 ; (local api vim.api)
 
 (local response (curl.easy {
@@ -10,6 +10,6 @@
     ]
     :writefunction  io.stderr
             }))
-;(fn run [input]
-;  (api.nvim_echo [[response]] true {}))
-;{:run run}
+(fn run [input]
+  (api.nvim_echo [[response]] true {}))
+{:run run}
