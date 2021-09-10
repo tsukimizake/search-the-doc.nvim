@@ -1,6 +1,6 @@
 
 (local curl (require :curl))
-; (local api vim.api)
+(local api vim.api)
 
 (local response (curl.easy {
     :url "http://httpbin.org/get"
