@@ -1,9 +1,7 @@
+require("curl")
 local api = vim.api
-
+local response = curl.easy({httpheader = {"X-Test-Header1: Header-Data1", "X-Test-Header2: Header-Data2"}, url = "http://httpbin.org/get", writefunction = io.stderr})
 local function run(input)
-  api.nvim_echo({{input}}, true, {})
+  return api.nvim_echo({{response}}, true, {})
 end
-
-return {
-  run = run
-}
+return {run = run}
