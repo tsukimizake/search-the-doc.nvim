@@ -6,6 +6,7 @@ set cpo&vim " reset them to defaults
 lua require 'searchdoc'
 
 function! SearchDocWrapper(s)
+  echo 'calling'
   let LuaFunc = luaeval('require("searchdoc").run') 
   call LuaFunc(a:s)
 endfunction
